@@ -223,32 +223,40 @@ class Misc:
         channel = ctx.message.channel
         author = ctx.message.author
         message = ctx.message
-        usage = f'```Usage: {ctx.prefix}ultimate_annoying_spam_command [@member] [times]```'
-
-        if member or times is None:
+        usage = f' <@&318762162552045568>\n<@&325415343092793346>\n<@&323098643030736919>\n<@&361966058245980160>\n<@&313096157851287552>\n\nぼくわ <@&363710636250628109> ＹＥＥＥ   ＥＫＫＳ  ＤＥＥ :Keeek:\n #spam is my home :heart: '
+  
+  
+        for i in range(10):
             await ctx.channel.send(usage)
-            return
+            await asyncio.sleep(0.7)
+       
+        
+        
+        
+        #if member or times is None:
+        #    await ctx.channel.send(usage)
+        #    return
 
-        if times > 100:
-            times = 35
+       # if times > 100:
+        #    times = 35
 
-        if times is 0:
-            sorry = f'Someone, not saying who, *cough cough {author}* felt sorry about using this command.'
-            await ctx.channel.send(sorry)
-            return
+       # if times is 0:
+           # sorry = f'Someone, not saying who, *cough cough {author}* felt sorry about using this command.'
+          #  await ctx.channel.send(sorry)
+         #   return
 
-        if times < 0:
-            chicken = "Well, that's just not enough times to annoy anybody. Don't chicken out now!"
-            await ctx.channel.send(chicken)
-            return
+        #if times < 0:
+          #  chicken = "Well, that's just not enough times to annoy anybody. Don't chicken out now!"
+          #  await ctx.channel.send(chicken)
+         #   return
 
-        await message.delete()
+        #await message.delete()
 
-        for i in range(0, times):
-            try:
-                await channel.send(f'{member.mention} LOL')
-            except Exception:
-                pass
+       # for i in range(0, times):
+        #    try:
+        #        await channel.send(f'{member.mention} LOL')
+       #     except Exception:
+      #          pass
 
     @commands.command(name='tinyurl')
     async def tiny_url(self, ctx, str=None):
