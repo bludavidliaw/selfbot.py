@@ -1,15 +1,18 @@
-
 '''
 MIT License
+
 Copyright (c) 2017 verixx
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
+
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -220,33 +223,32 @@ class Misc:
         channel = ctx.message.channel
         author = ctx.message.author
         message = ctx.message
-        usage = f' <@&318762162552045568>\n<@&325415343092793346>\n<@&323098643030736919>\n<@&361966058245980160>\n<@&313096157851287552>\n\nぼくわ <@&363710636250628109> ＹＥＥＥ   ＥＫＫＳ  ＤＥＥ <:Keeek:352104665464307722> '
+        usage = f'```Usage: <@&318762162552045568>\n<@&325415343092793346>\n<@&323098643030736919>\n<@&361966058245980160>\n<@&313096157851287552>\n\nぼくわ <@&363710636250628109> ＹＥＥＥ   ＥＫＫＳ  ＤＥＥ <:Keeek:352104665464307722> ```'
 
-        if i in range(10):
+        if member or times is None:
             await ctx.channel.send(usage)
-            await asyncio.sleep(0.7) 
-#            return
+            return
 
-#        if times > 100:
-#            times = 35
+        if times > 100:
+            times = 35
 
-#        if times is 0:
-#            sorry = f'Someone, not saying who, *cough cough {author}* felt sorry about using this command.'
-#            await ctx.channel.send(sorry)
-#            return
+        if times is 0:
+            sorry = f'Someone, not saying who, *cough cough {author}* felt sorry about using this command.'
+            await ctx.channel.send(sorry)
+            return
 
-#        if times < 0:
-#            chicken = "Well, that's just not enough times to annoy anybody. Don't chicken out now!"
-#            await ctx.channel.send(chicken)
-#            return
+        if times < 0:
+            chicken = "Well, that's just not enough times to annoy anybody. Don't chicken out now!"
+            await ctx.channel.send(chicken)
+            return
 
-#        await message.delete()
+        await message.delete()
 
-#        for i in range(0, times):
-#            try:
-#                await channel.send(f'{member.mention} LOL')
-#            except Exception:
-#                pass
+        for i in range(0, times):
+            try:
+                await channel.send(f'{member.mention} LOL')
+            except Exception:
+                pass
 
     @commands.command(name='tinyurl')
     async def tiny_url(self, ctx, str=None):
@@ -450,4 +452,5 @@ class Misc:
 
 
 def setup(bot):
-bot.add_cog(Misc(bot))
+    bot.add_cog(Misc(bot))
+
