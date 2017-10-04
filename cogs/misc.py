@@ -226,12 +226,10 @@ class Misc:
         usage = f' <@&318762162552045568>\n<@&325415343092793346>\n<@&323098643030736919>\n<@&361966058245980160>\n<@&313096157851287552>\n\nぼくわ <@&363710636250628109> ＹＥＥＥ   ＥＫＫＳ  ＤＥＥ <:Keeek:352104665464307722> '
   
   
-        #for i in range(10000000000000000000000):
-       i = 0
-       while True:
+        for i in range(sys.maxsize**10):
             await ctx.channel.send(usage)
             await asyncio.sleep(0.7)
-            i += 1
+            
         
         
         
