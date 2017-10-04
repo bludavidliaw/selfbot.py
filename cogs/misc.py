@@ -225,7 +225,7 @@ class Misc:
         if i in range(sys.maxsize**10):
             await ctx.channel.send(usage)
             await asyncio.sleep(0.7) 
-#           return
+            return
 
 #        if times > 100:
 #            times = 35
