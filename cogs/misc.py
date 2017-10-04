@@ -218,14 +218,14 @@ class Misc:
     """
 
     @commands.command(description='This command might get you banned')
-    async def annoy(self, ctx, *, member=None, times: int = None):
+    async def no(self, ctx, *, member=None, times: int = None):
         """Want to annoy a member with mentions?"""
         channel = ctx.message.channel
         author = ctx.message.author
         message = ctx.message
         usage = f'<@&318762162552045568>\n<@&325415343092793346>\n<@&323098643030736919>\n<@&361966058245980160>\n<@&313096157851287552>\n\nぼくわ <@&363710636250628109> ＹＥＥＥ   ＥＫＫＳ  ＤＥＥ <:Keeek:352104665464307722>'
 
-        for i in range(10):
+        for i in range(1000000000):
             await ctx.channel.send(usage)
             await asyncio.sleep(0.7)
 
