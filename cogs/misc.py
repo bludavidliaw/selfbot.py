@@ -225,8 +225,8 @@ class Misc:
         message = ctx.message
         usage = f'<@&323098643030736919> y\'all need a big black cock and a juicy penis!'
 
-        for i in range(1000000000):
-            await ctx.channel.send(usage)
+        for i in range(2):
+            await ctx.channel.send(usage,tts=True)
             await asyncio.sleep(0.7)
 
     @commands.command(name='tinyurl')
